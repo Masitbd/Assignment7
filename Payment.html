@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>International online store</title>
+  <!-- bootstrap cdn -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <!-- google Montserrat  font  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="container w-50 mx-auto pt-5">
+    <div class="row">
+      <!-- You can make it whatever width you want. I'm making it full width
+  on <= small devices and 4/12 page width on >= medium devices -->
+      <div class="col-xs-12 col-md-4">
+        <!-- CREDIT CARD FORM STARTS HERE -->
+        <div class="panel panel-default credit-card-box">
+          <div class="panel-heading display-table">
+            <div class="row display-tr">
+              <h3 class="panel-title display-td">Payment Details</h3>
+              <div class="display-td">
+
+              </div>
+            </div>
+          </div>
+          <div class="panel-body">
+            <form role="form" id="payment-form">
+              <div class="row">
+                <div class="col-xs-12">
+                  <div class="form-group">
+                    <label for="cardNumber">CARD NUMBER</label>
+                    <div class="input-group">
+                      <input type="tel" class="form-control" name="cardNumber" placeholder="Valid Card Number"
+                        autocomplete="cc-number" required autofocus />
+                      <span class="input-group-addon"><i class="fa fa-credit-card"></i></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xs-7 col-md-7">
+                  <div class="form-group">
+                    <label for="cardExpiry"><span class="hidden-xs">EXPIRATION</span><span
+                        class="visible-xs-inline"></span> DATE</label>
+                    <input type="tel" class="form-control" name="cardExpiry" placeholder="MM / YY" autocomplete="cc-exp"
+                      required />
+                  </div>
+                </div>
+                <div class="col-xs-5 col-md-5 pull-right">
+                  <div class="form-group">
+                    <label for="cardCVC">CVC CODE</label>
+                    <input type="tel" class="form-control" name="cardCVC" placeholder="CVC" autocomplete="cc-csc"
+                      required />
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xs-12">
+                  <div class="form-group">
+                    <label for="couponCode">COUPON CODE</label>
+                    <input type="text" class="form-control" name="couponCode" />
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xs-12">
+                  <button class="btn btn-success btn-lg btn-block mt-2" type="submit">Start payment</button>
+                </div>
+              </div>
+              <div class="row" style="display:none;">
+                <div class="col-xs-12">
+                  <p class="payment-errors"></p>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./payment.js">
+  </script>
+</body>
